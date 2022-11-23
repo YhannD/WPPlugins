@@ -1,0 +1,67 @@
+:root {
+    --gs-bg-link					: white;
+    --gs-bg-link-hover		:	#dd5735;
+    --gs-bg-caption   		:	rgba(0,0,0,0.5);
+    --gs-color         		:	white;
+    --gs-radius           : 1rem;
+}
+/* ******************************************************* */
+/* ************** Les éléments du caroussel ************** */
+/* ******************************************************* */
+
+.greatslider {
+    position : relative;
+}
+
+.greatslider-figure {
+    display : none;
+    margin : 0 6em;
+    padding : 1rem;
+    border-radius : var(--gs-radius);
+    background : rgba(255,255,255,0.8);
+}
+
+.greatslider-figure.active {
+    display : block;
+}
+
+.greatslider-picture {
+    border-radius : var(--gs-radius);
+}
+
+.greatslider-legend {
+    position : absolute;
+    left : 1rem; right :1rem; top : 1rem;
+    padding : 1rem;
+    border-radius : 1rem 1rem 0 0;
+    background : rgba(255, 255, 255, 0.5);
+    font-size : 1.6em;
+    font-weight : bold;
+}
+
+.greatslider-navigation {
+    position : absolute;
+    top  : 50%;
+    left : 1rem; right : 1rem;
+    transform : translateY(-50%);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.greatslider-navigation a {
+    display: inline-block;
+    width : 2em;
+    height : 2em;
+    text-align: center;
+    font-size : 3em;
+    color : var(--gs-bg-link);
+    text-decoration: none;
+}
+
+.greatslider-navigation a:hover,
+.greatslider-navigation a:focus,
+.greatslider-navigation a:active {
+    background-color : rgba(255,255,255,0.5);
+    color : var(--gs-bg-link-hover);
+}
